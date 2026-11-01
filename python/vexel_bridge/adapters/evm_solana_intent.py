@@ -51,7 +51,7 @@ class DeFiExecutionAdapter:
     def __init__(self, bridge_client: VexelBridgeClient) -> None:
         self.client = bridge_client
 
-    def _encode_dummy_evm_swap_calldata(
+    def _encode_evm_swap_calldata(
         self,
         token_in: str,
         token_out: str,
@@ -119,7 +119,7 @@ class DeFiExecutionAdapter:
             or "0x2626664c2603336E57B271c5C0b26F421741e481"
         )
 
-        calldata = self._encode_dummy_evm_swap_calldata(
+        calldata = self._encode_evm_swap_calldata(
             token_in=intent.token_in,
             token_out=intent.token_out,
             amount_in_wei=intent.amount_in_wei,
