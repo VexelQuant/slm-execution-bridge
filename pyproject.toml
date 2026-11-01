@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slm-execution-bridge"
+version = "0.1.0"
+description = "Ultra-low latency (<20ms) execution bridge connecting quantized SLMs to Polymarket CLOB and DeFi protocols"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "VexelQuant Research", email = "research@vexelquant.me" }
+]
+keywords = [
+    "quantitative-finance",
+    "arbitrage",
+    "polymarket",
+    "defi",
+    "solana-jupiter",
+    "uniswap",
+    "slm",
+    "gguf",
+    "grammar-constrained-decoding"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+    "httpx>=0.25.0",
+    "pydantic>=2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0"
+]
+
+[project.urls]
+Homepage = "https://vexelquant.me"
+Repository = "https://github.com/VexelQuant/slm-execution-bridge"
+HuggingFace = "https://huggingface.co/VexelQuant"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.setuptools.packages.find]
+where = ["python"]
+include = ["vexel_bridge*"]

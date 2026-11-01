@@ -1,0 +1,33 @@
+{
+  "name": "@vexel/slm-execution-bridge",
+  "version": "0.1.0",
+  "description": "Ultra-low latency (<20ms) execution bridge connecting quantized SLMs to Polymarket CLOB and DeFi protocols",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "quantitative-finance",
+    "slm",
+    "polymarket",
+    "clob",
+    "defi",
+    "uniswap",
+    "jupiter",
+    "elizaos",
+    "arbitrage"
+  ],
+  "author": "VexelQuant Research <research@vexelquant.me> (https://vexelquant.me)",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
