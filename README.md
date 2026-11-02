@@ -1,7 +1,6 @@
 # slm-execution-bridge
 
-[![PyPI version](https://img.shields.io/badge/pypi-v0.1.0-blue.svg)](https://pypi.org/project/slm-execution-bridge/)
-[![npm version](https://img.shields.io/badge/npm-v0.1.0-red.svg)](https://www.npmjs.com/package/@vexel/slm-execution-bridge)
+[![GitHub Release](https://img.shields.io/badge/release-v0.1.0-blue.svg)](https://github.com/VexelQuant/slm-execution-bridge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![HuggingFace Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VexelQuant-ffcc00)](https://huggingface.co/VexelQuant)
 
@@ -200,15 +199,47 @@ export default {
 
 ## 5. Installation
 
+Install directly from GitHub or build from source:
+
 ### Python
+
+#### Direct GitHub Install
 ```bash
-uv pip install -e .
-# or
+# Using pip
+pip install git+https://github.com/VexelQuant/slm-execution-bridge.git
+
+# Or using uv
+uv pip install git+https://github.com/VexelQuant/slm-execution-bridge.git
+```
+
+#### From Source (Editable Development)
+```bash
+git clone https://github.com/VexelQuant/slm-execution-bridge.git
+cd slm-execution-bridge
+
 pip install -e .
 ```
 
 ### TypeScript / Node.js
+
+#### Direct GitHub Dependency
+In your `package.json`:
+```json
+{
+  "dependencies": {
+    "@vexel/slm-execution-bridge": "github:VexelQuant/slm-execution-bridge"
+  }
+}
+```
+Or via npm / pnpm:
 ```bash
+npm install github:VexelQuant/slm-execution-bridge
+```
+
+#### From Source
+```bash
+git clone https://github.com/VexelQuant/slm-execution-bridge.git
+cd slm-execution-bridge
 npm install
 npm run build
 ```
